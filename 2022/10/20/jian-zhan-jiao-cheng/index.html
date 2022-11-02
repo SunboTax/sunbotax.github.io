@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="建站教程, 卷不死同行，累死自己">
+    <meta name="keywords" content="建站教程, 干饭！">
     <meta name="description" content="完整构建流程
 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +21,15 @@
     <title>建站教程 | Response 404</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
+    <style>
+        body{
+            background-image: url(/medias/cover.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
 
 
     <!-- bg-cover style     -->
@@ -150,7 +159,7 @@
         <div class="logo-name">Response 404</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            卷不死同行，累死自己
             
         </div>
     </div>
@@ -288,21 +297,21 @@
 </header>
 
     
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
-<script>
-    (function() {
-        let pwd = '';
-        if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
-                location.href = '/';
+    <script src="/libs/cryptojs/crypto-js.min.js"></script>
+    <script>
+        (function () {
+            let pwd = '';
+            if (pwd && pwd.length > 0) {
+                if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                    alert('密码错误，将返回主页！');
+                    location.href = '/';
+                }
             }
-        }
-    })();
-</script>
+        })();
+    </script>
+    
 
-
-
+        
 
 <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
@@ -317,12 +326,12 @@
 </div>
 
 
+            
 
+                <main class="post-container content">
 
-<main class="post-container content">
-
-    
-    <div class="row">
+                    
+                        <div class="row">
     <div id="main-content" class="col s12 m12 l9">
         <!-- 文章内容详情 -->
 <div id="artDetail">
@@ -383,7 +392,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Wilfried SUN</a>
+                    <a href="/about" rel="external nofollow noreferrer">SunboTax</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -406,7 +415,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Wilfried SUN</a>
+                    <a href="/about" target="_blank">SunboTax</a>
                     !
                 </span>
             </div>
@@ -439,7 +448,7 @@
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <div class="social-share" data-sites="wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <script src="/libs/share/js/social-share.min.js"></script>
     
 
@@ -533,7 +542,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            Wilfried SUN
+                            SunboTax
                             
                         </span>
                     </div>
@@ -570,7 +579,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            Wilfried SUN
+                            SunboTax
                             
                         </span>
                     </div>
@@ -689,12 +698,11 @@
     });
 </script>
 
-    
+                            
 
-</main>
+                </main>
 
-
-
+                
 
     <footer class="page-footer bg-color">
     
@@ -760,7 +768,7 @@
             
                 <span id="year">2022</span>
             
-            <a href="/about" target="_blank">Wilfried SUN</a>
+            <a href="/about" target="_blank">SunboTax</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -768,16 +776,6 @@
             
             
             
-                <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
-            </span>
-            
-            
-                <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
             
             <br>
 
@@ -982,20 +980,6 @@ $(function () {
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
 
     
     <script src="/libs/others/clicklove.js" async="async"></script>

@@ -4,10 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ns3使用笔记, 卷不死同行，累死自己">
+    <meta name="keywords" content="ns3使用笔记, 干饭！">
     <meta name="description" content="NS-3安装及使用始末1. 安装NS-3官网官网给出了下载教程（很多类似开源软件也会有自己的wiki，给出了安装教程和doc，另外可能附有一些示例代码）  
 
-官网给出的了三种方法安装方法，建议使用bake：下载bake代码1git clo">
+官网给出的了三种方法安装方法，建议使用bake：下载bake代码  
+git c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,6 +23,15 @@
     <title>ns3使用笔记 | Response 404</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
+    <style>
+        body{
+            background-image: url(/medias/cover.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
 
 
     <!-- bg-cover style     -->
@@ -151,7 +161,7 @@
         <div class="logo-name">Response 404</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            卷不死同行，累死自己
             
         </div>
     </div>
@@ -289,21 +299,21 @@
 </header>
 
     
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
-<script>
-    (function() {
-        let pwd = '';
-        if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
-                location.href = '/';
+    <script src="/libs/cryptojs/crypto-js.min.js"></script>
+    <script>
+        (function () {
+            let pwd = '';
+            if (pwd && pwd.length > 0) {
+                if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                    alert('密码错误，将返回主页！');
+                    location.href = '/';
+                }
             }
-        }
-    })();
-</script>
+        })();
+    </script>
+    
 
-
-
+        
 
 <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
@@ -318,12 +328,12 @@
 </div>
 
 
+            
 
+                <main class="post-container content">
 
-<main class="post-container content">
-
-    
-    <div class="row">
+                    
+                        <div class="row">
     <div id="main-content" class="col s12 m12 l9">
         <!-- 文章内容详情 -->
 <div id="artDetail">
@@ -369,16 +379,24 @@
             <div id="articleContent">
                 <h1 id="NS-3安装及使用始末"><a href="#NS-3安装及使用始末" class="headerlink" title="NS-3安装及使用始末"></a>NS-3安装及使用始末</h1><h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><p><a target="_blank" rel="noopener" href="https://www.nsnam.org/">NS-3官网</a><br>官网给出了<a target="_blank" rel="noopener" href="https://www.nsnam.org/wiki/Installation">下载教程</a>（很多类似开源软件也会有自己的wiki，给出了安装教程和doc，另外可能附有一些示例代码）  </p>
 <hr>
-<p>官网给出的了三种方法安装方法，建议使用bake：<br>下载bake代码<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://gitlab.com/nsnam/bake</span><br></pre></td></tr></table></figure></p>
-<p>将bake添加到环境变量中<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export BAKE_HOME=`pwd`/bake </span><br><span class="line">export PATH=$PATH:$BAKE_HOME</span><br><span class="line">export PYTHONPATH=$PYTHONPATH:$BAKE_HOME</span><br></pre></td></tr></table></figure></p>
-<p>检查缺失的模块和需要下载的模块<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bake.py check</span><br></pre></td></tr></table></figure></p>
-<p>指定版本和模块配置<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bake.py configure -e ns-3.xx(xx为下载的版本)</span><br></pre></td></tr></table></figure></p>
-<p>部署安装<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bake.py deploy</span><br></pre></td></tr></table></figure></p>
-<p>安装完成之后需要初始化配置，目前的版本不再使用<code>waf</code>命令，取而代之的是<code>ns3</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./ns3 configure</span><br></pre></td></tr></table></figure>
-<p>要启用示例代码和测试代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./ns3 configure --enable-examples --enable-tests</span><br><span class="line">./ns3 build</span><br></pre></td></tr></table></figure>
-<hr>
+<p>官网给出的了三种方法安装方法，建议使用bake：<br>下载bake代码  </p>
+<pre><code>git clone https://gitlab.com/nsnam/bake
+</code></pre><p>将bake添加到环境变量中</p>
+<pre><code>export BAKE_HOME=`pwd`/bake 
+export PATH=$PATH:$BAKE_HOME
+export PYTHONPATH=$PYTHONPATH:$BAKE_HOME
+</code></pre><p>检查缺失的模块和需要下载的模块  </p>
+<pre><code>bake.py check
+</code></pre><p>指定版本和模块配置</p>
+<pre><code>bake.py configure -e ns-3.xx(xx为下载的版本)
+</code></pre><p>部署安装</p>
+<pre><code>bake.py deploy
+</code></pre><p>安装完成之后需要初始化配置，目前的版本不再使用<code>waf</code>命令，取而代之的是<code>ns3</code></p>
+<pre><code>./ns3 configure
+</code></pre><p>要启用示例代码和测试代码</p>
+<pre><code>./ns3 configure --enable-examples --enable-tests
+./ns3 build
+</code></pre><hr>
 <h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h2><p>使用ns3的dctcp模块仿真数据中心网络的胖树拓扑</p>
 <h3 id="2-1-Fat-Tree-Topology"><a href="#2-1-Fat-Tree-Topology" class="headerlink" title="2.1 Fat-Tree Topology"></a>2.1 Fat-Tree Topology</h3><p>k元胖树网络拓扑结构  </p>
 <ol>
@@ -386,12 +404,7 @@
 <li>核心层有$(\frac{k}{2})^2$个交换机</li>
 <li>k个pod，每个pod包含k个交换机，其中汇聚层和接入层分别包含$\frac{k}{2}$台交换机</li>
 <li>接入层每台交换机可以接入$\frac{k}{2}$台服务器（因此一个k元胖树网络能接入$\frac{k^3}{4}$台服务器）</li>
-<li>任意两个pod之间存在k条路径<center class="half">
-<img src="/2022/10/30/ns3-shi-yong-bi-ji/Fat-Tree-Architecture.png" wight="680" height="300/">
-<div>4元胖树网络</div>
-</center>
-
-</li>
+<li>任意两个pod之间存在k条路径<br><img src="/2022/10/30/ns3-shi-yong-bi-ji/Fat-Tree-Architecture.png" alt="4元胖树网络"></li>
 </ol>
 
                 
@@ -409,7 +422,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Wilfried SUN</a>
+                    <a href="/about" rel="external nofollow noreferrer">SunboTax</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -432,7 +445,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Wilfried SUN</a>
+                    <a href="/about" target="_blank">SunboTax</a>
                     !
                 </span>
             </div>
@@ -465,7 +478,7 @@
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <div class="social-share" data-sites="wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
     <script src="/libs/share/js/social-share.min.js"></script>
     
 
@@ -560,7 +573,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            Wilfried SUN
+                            SunboTax
                             
                         </span>
                     </div>
@@ -598,7 +611,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            Wilfried SUN
+                            SunboTax
                             
                         </span>
                     </div>
@@ -716,12 +729,11 @@
     });
 </script>
 
-    
+                            
 
-</main>
+                </main>
 
-
-
+                
 
     <footer class="page-footer bg-color">
     
@@ -787,7 +799,7 @@
             
                 <span id="year">2022</span>
             
-            <a href="/about" target="_blank">Wilfried SUN</a>
+            <a href="/about" target="_blank">SunboTax</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -795,16 +807,6 @@
             
             
             
-                <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
-            </span>
-            
-            
-                <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
             
             <br>
 
@@ -1009,20 +1011,6 @@ $(function () {
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
 
     
     <script src="/libs/others/clicklove.js" async="async"></script>
