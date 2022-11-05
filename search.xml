@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Github上传大文件</title>
+      <link href="/2022/11/05/github-shang-chuan-da-wen-jian/"/>
+      <url>/2022/11/05/github-shang-chuan-da-wen-jian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="github上传大文件"><a class="markdownIt-Anchor" href="#github上传大文件"></a> Github上传大文件</h1><p>本地仓库打开<code>git bash</code><br>安装github large file storage</p><pre><code>git lfs install</code></pre><p>追踪需要上传的文件</p><pre><code>git lfs track [待追踪文件]</code></pre><p>例如</p><pre><code>git lfs track *(追踪当前文件夹下所有文件(但不包括子文件内容))git lfs track *.pdf(追踪所有pdf文件)</code></pre><p>添加追踪的属性文件到本地git仓库</p><pre><code>git add .gitattributes</code></pre><p>上传属性文件到远程仓库</p><pre><code>git push</code></pre><p>之后添加需要上传文件到本地git仓库，正常push即可</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 资源分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>书籍链接</title>
       <link href="/2022/11/04/shu-ji-lian-jie/"/>
       <url>/2022/11/04/shu-ji-lian-jie/</url>
