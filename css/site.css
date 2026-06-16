@@ -176,6 +176,47 @@ h1, h2, h3 { letter-spacing: 0; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .tags span { border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; color: var(--muted); font-size: 0.8rem; }
 .links { display: flex; gap: 12px; margin-top: 12px; }
+.project-list, .github-project-list {
+  display: grid;
+  gap: 16px;
+}
+.project-card, .github-project-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.project-card h3, .github-project-card h3 {
+  margin: 4px 0 8px;
+  font-size: 1.08rem;
+}
+.github-project-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: start;
+}
+.project-url {
+  display: inline-block;
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+  font-size: 0.92rem;
+}
+.star-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+}
+.star-count svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
 .timeline { border-top: 1px solid var(--line); }
 .timeline article { padding: 20px 0; border-bottom: 1px solid var(--line); }
 .timeline h3 { margin: 4px 0; font-size: 1.08rem; }
@@ -197,6 +238,7 @@ h1, h2, h3 { letter-spacing: 0; }
   .hero-photo { min-height: 210px; }
   .identity-panel, .intro-panel { padding: 20px; }
   .publication { grid-template-columns: 1fr; gap: 6px; }
+  .github-project-card { grid-template-columns: 1fr; }
   .contact-list > div { grid-template-columns: 1fr; gap: 4px; }
   .site-footer { flex-direction: column; }
 }
