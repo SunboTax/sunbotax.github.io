@@ -18,17 +18,6 @@
     
     
     <entry>
-      <title>Contact</title>
-      <link href="/contact/index.html"/>
-      <url>/contact/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>CV</title>
       <link href="/cv/index.html"/>
       <url>/cv/index.html</url>
@@ -43,6 +32,17 @@
       <title>Projects</title>
       <link href="/projects/index.html"/>
       <url>/projects/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Contact</title>
+      <link href="/contact/index.html"/>
+      <url>/contact/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
